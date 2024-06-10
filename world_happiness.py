@@ -29,4 +29,9 @@ data = {
 }
 
 df_prepared = pd.DataFrame(data)
+
+# Save changes to a new CSV file
+output_file_path = 'world_happiness_filtered.csv'
+df_prepared.to_csv(output_file_path, index=False)
+
 print(df_prepared.head())
