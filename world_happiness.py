@@ -53,62 +53,18 @@ def plot_graph(subplot_index, x, y, title, xlabel, ylabel, data, palette):
     
 # 1.Life Ladder
 plot_graph(1, 'year', 'Life Ladder', 'Life Ladder Over Years', 'Year', 'Life Ladder', df_prepared, palette)
-
-# plt.subplot(3, 3, 1)
-# sns.lineplot(x='year', y='Life Ladder', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Life Ladder Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Life Ladder')
-# # Format x-axis
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
-
-# # 2.Log GDP per capita
-# plt.subplot(3, 3, 2)
-# sns.lineplot(x='year', y='Log GDP per capita', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Log GDP per capita Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Log GDP per capita')
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
-
-# # 3.Social support
-# plt.subplot(3, 3, 3)
-# sns.lineplot(x='year', y='Social support', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Social support Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Social support')
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
-
-# # 4.Freedom to make life choices
-# plt.subplot(3, 3, 4)
-# sns.lineplot(x='year', y='Freedom to make life choices', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Freedom to make life choices Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Freedom to make life choices')
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
-
-# # 5.Generosity
-# plt.subplot(3, 3, 5)
-# sns.lineplot(x='year', y='Generosity', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Generosity Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Generosity')
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
-
-# # 6.Perceptions of corruption
-# plt.subplot(3, 3, 6)
-# sns.lineplot(x='year', y='Perceptions of corruption', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Perceptions of corruption Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Perceptions of corruption')
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
-
-# # 7.Healthy life expectancy at birth
-# plt.subplot(3, 3, 7)
-# sns.lineplot(x='year', y='Healthy life expectancy at birth', hue='Country name', data=df_prepared, marker='o', palette=palette)
-# plt.title('Healthy life expectancy at birth Over Years')
-# plt.xlabel('Year')
-# plt.ylabel('Healthy life expectancy at birth')
-# plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+# 2.Log GDP per capita
+plot_graph(2, 'year', 'Log GDP per capita', 'Log GDP per capita Over Years', 'Year', 'Log GDP per capita', df_prepared, palette)
+# 3.Social support
+plot_graph(3, 'year', 'Social support', 'Social support Over Years', 'Year', 'Social support', df_prepared, palette)
+# 4.Freedom to make life choices
+plot_graph(4, 'year', 'Freedom to make life choices', 'Freedom to make life choices Over Years', 'Year', 'Freedom to make life choices', df_prepared, palette)
+# 5.Generosity
+plot_graph(5, 'year', 'Generosity', 'Generosity Over Years', 'Year', 'Generosity', df_prepared, palette)
+# 6.Perceptions of corruption
+plot_graph(6, 'year', 'Perceptions of corruption', 'Perceptions of corruption Over Years', 'Year', 'Perceptions of corruption', df_prepared, palette)
+# 7.Healthy life expectancy at birth
+plot_graph(7, 'year', 'Healthy life expectancy at birth', 'Healthy life expectancy at birth Over Years', 'Year', 'Healthy life expectancy at birth', df_prepared, palette)
 
 plt.tight_layout()
 plt.show()
