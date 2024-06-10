@@ -67,4 +67,10 @@ plot_graph(6, 'year', 'Perceptions of corruption', 'Perceptions of corruption Ov
 plot_graph(7, 'year', 'Healthy life expectancy at birth', 'Healthy life expectancy at birth Over Years', 'Year', 'Healthy life expectancy at birth', df_prepared, palette)
 
 plt.tight_layout()
-plt.show()
+# plt.show()
+
+####
+# Correlation matrix
+df_for_corr = df_prepared.drop(['Country name', 'year'], axis=1)
+corr_matrix = df_for_corr.corr()
+print(corr_matrix)
