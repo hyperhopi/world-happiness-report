@@ -74,3 +74,9 @@ plt.tight_layout()
 df_for_corr = df_prepared.drop(['Country name', 'year'], axis=1)
 corr_matrix = df_for_corr.corr()
 print(corr_matrix)
+
+# Plotting the correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
+plt.title('Correlation Matrix of Happiness and Indicators')
+plt.show()
