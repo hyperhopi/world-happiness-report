@@ -22,6 +22,9 @@ data = {
     'Life Ladder': df_filtered['Life Ladder'].tolist(),
     'Log GDP per capita': df_filtered['Log GDP per capita'].tolist(),
     'Social support': df_filtered['Social support'].tolist(),
+    'Freedom to make life choices': df_filtered['Freedom to make life choices'].tolist(),
+    'Generosity': df_filtered['Generosity'].tolist(),
+    'Perceptions of corruption': df_filtered['Perceptions of corruption'].tolist(),
     'Healthy life expectancy at birth': df_filtered['Healthy life expectancy at birth'].tolist()
 }
 
