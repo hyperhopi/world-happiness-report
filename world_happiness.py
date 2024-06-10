@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 file_path = 'World-happiness-report-v2024.csv'
 
@@ -35,3 +37,20 @@ output_file_path = 'world_happiness_filtered.csv'
 df_prepared.to_csv(output_file_path, index=False)
 
 print(df_prepared.head())
+
+# Plotting
+plt.figure(figsize=(18, 12))
+# Color palette
+palette = {"Spain": "#AD1519", "Sweden": "#006AA7"}
+
+# 1. Life Ladder
+plt.subplot(3, 3, 1)
+sns.lineplot(x='year', y='Life Ladder', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Life Ladder Over Years')
+plt.xlabel('Year')
+plt.ylabel('Life Ladder')
+# Format x-axis
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+plt.tight_layout()
+plt.show()
