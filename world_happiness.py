@@ -43,13 +43,61 @@ plt.figure(figsize=(18, 12))
 # Color palette
 palette = {"Spain": "#AD1519", "Sweden": "#006AA7"}
 
-# 1. Life Ladder
+# 1.Life Ladder
 plt.subplot(3, 3, 1)
 sns.lineplot(x='year', y='Life Ladder', hue='Country name', data=df_prepared, marker='o', palette=palette)
 plt.title('Life Ladder Over Years')
 plt.xlabel('Year')
 plt.ylabel('Life Ladder')
 # Format x-axis
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+# 2.Log GDP per capita
+plt.subplot(3, 3, 2)
+sns.lineplot(x='year', y='Log GDP per capita', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Log GDP per capita Over Years')
+plt.xlabel('Year')
+plt.ylabel('Log GDP per capita')
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+# 3.Social support
+plt.subplot(3, 3, 3)
+sns.lineplot(x='year', y='Social support', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Social support Over Years')
+plt.xlabel('Year')
+plt.ylabel('Social support')
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+# 4.Freedom to make life choices
+plt.subplot(3, 3, 4)
+sns.lineplot(x='year', y='Freedom to make life choices', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Freedom to make life choices Over Years')
+plt.xlabel('Year')
+plt.ylabel('Freedom to make life choices')
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+# 5.Generosity
+plt.subplot(3, 3, 5)
+sns.lineplot(x='year', y='Generosity', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Generosity Over Years')
+plt.xlabel('Year')
+plt.ylabel('Generosity')
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+# 6.Perceptions of corruption
+plt.subplot(3, 3, 6)
+sns.lineplot(x='year', y='Perceptions of corruption', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Perceptions of corruption Over Years')
+plt.xlabel('Year')
+plt.ylabel('Perceptions of corruption')
+plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
+
+# 7.Healthy life expectancy at birth
+plt.subplot(3, 3, 7)
+sns.lineplot(x='year', y='Healthy life expectancy at birth', hue='Country name', data=df_prepared, marker='o', palette=palette)
+plt.title('Healthy life expectancy at birth Over Years')
+plt.xlabel('Year')
+plt.ylabel('Healthy life expectancy at birth')
 plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
 
 plt.tight_layout()
