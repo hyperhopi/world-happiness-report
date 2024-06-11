@@ -70,13 +70,31 @@ plt.tight_layout()
 # plt.show()
 
 ####
-# Correlation matrix
-df_for_corr = df_prepared.drop(['Country name', 'year'], axis=1)
-corr_matrix = df_for_corr.corr()
-print(corr_matrix)
+# Correlation matrix SWEDEN and SPAIN
+# df_for_corr = df_prepared.drop(['Country name', 'year'], axis=1)
+# corr_matrix = df_for_corr.corr()
+# print(corr_matrix)
 
-# Plotting the correlation matrix
-plt.figure(figsize=(10, 8))
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
-plt.title('Correlation Matrix of Happiness and Indicators')
+# Correlation matrix for Spain
+df_spain = df_prepared[df_prepared['Country name'] == 'Spain'].drop(columns=['Country name', 'year'])
+corr_matrix_spain = df_spain.corr()
+print("Spain Correlation Matrix:")
+print(corr_matrix_spain)
+
+# Correlation matrix for Sweden
+df_sweden = df_prepared[df_prepared['Country name'] == 'Sweden'].drop(columns=['Country name', 'year'])
+corr_matrix_sweden = df_sweden.corr()
+print("Sweden Correlation Matrix:")
+print(corr_matrix_sweden)
+
+# Plotting the correlation matrices side by side
+fig, axes = plt.subplots(1, 2, figsize=(18, 8))
+
+sns.heatmap(corr_matrix_spain, annot=True, cmap='coolwarm', vmin=-1, vmax=1, ax=axes[0])
+axes[0].set_title('Correlation Matrix of Happiness and Indicators - Spain')
+
+sns.heatmap(corr_matrix_sweden, annot=True, cmap='coolwarm', vmin=-1, vmax=1, ax=axes[1])
+axes[1].set_title('Correlation Matrix of Happiness and Indicators - Sweden')
+
+plt.tight_layout()
 plt.show()
