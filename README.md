@@ -26,4 +26,5 @@ Line charts show the trends over the years for various indicators between Spain 
 
 #### 🐶2 : Heatmap Showing Each Indicator's Correlation with Happiness
 The heatmap below displays the correlation matrix between happiness (Life Ladder) and various indicators. It helps to understand the relationship between different factors and their impact on happiness. The heatmap was created using Seaborn and configured using Matplotlib. <br>
-![image](https://github.com/hyperhopi/world-happiness-report/assets/70691848/e9210dd5-452e-4727-898c-effc674f2fe3)
+![image](https://github.com/hyperhopi/world-happiness-report/assets/70691848/70877a33-1796-4e7b-a88a-f5b946912b73)
+
